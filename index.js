@@ -59,7 +59,9 @@ function initSets(emitter, config, fileList, executor, logger, launcher, injecto
             // Reset single run after last set
             config.singleRun = singleRun;
 
-            results.exitCode = runAllPass ? 0 : 1;
+            if (results) {
+              results.exitCode = runAllPass ? 0 : 1;
+					  }
         }
     }
 
